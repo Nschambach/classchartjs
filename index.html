@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Data Portfolio</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      font: Arial;
+      background-color: #f4f6f8;
+      color: #222;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #243b55;
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 25px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 10px;
+    }
+
+    .photos {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .photos img {
+      width: 45%;
+      min-width: 200px;
+      border-radius: 8px;
+    }
+
+    .chart-container {
+      max-width: 600px;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>My Data Portfolio</h1>
+  <p>Exploring Data Through Visualization</p>
+</header>
+
+<main>
+
+  <section>
+    <h2>About My Portfolio</h2>
+    <p>
+      Welcome to my portfolio! This website
+      demonstrates my ability to create data
+      visualizations using Chart.js.
+    </p>
+  </section>
+
+  <section>
+    <h2>Photo Gallery</h2>
+    <div class="photos">
+      <img src="photo1.jpg" alt="First photo">
+      <img src="photo2.jpg" alt="Second photo">
+    </div>
+  </section>
+
+  <section>
+    <h2>Chart 1: Weekly Exercise</h2>
+    <div class="chart-container">
+      <canvas id="lineChart"></canvas>
+    </div>
+  </section>
+
+  <section>
+    <h2>Chart 2: Dogs vs. Cats</h2>
+    <div class="chart-container">
+      <canvas id="pieChart"></canvas>
+    </div>
+  </section>
+
+  <section>
+    <h2>Design Choices</h2>
+    <p>
+      I chose a simple layout with a light
+      background and dark blue header to
+      create a clean and professional appearance.
+      The charts are separated into individual
+      sections to make the information easier
+      to understand. I used contrasting colors
+      to distinguish between data categories
+      and organized the content to make the
+      website easy to navigate.
+    </p>
+  </section>
+
+</main>
+
+<script>
+  // Chart 1: Line Graph
+  new Chart(document.getElementById('lineChart'), {
+    type: 'line',
+    data: {
+      labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+      datasets: [{
+        label: 'Minutes Exercised',
+        data: [30, 45, 25, 60, 50],
+        borderColor: 'blue',
+        tension: 0.3
+      }]
+    }
+  });
+
+  // Chart 2: Pie Chart
+  new Chart(document.getElementById('pieChart'), {
+    type: 'pie',
+    data: {
+      labels: ['Dogs', 'Cats'],
+      datasets: [{
+        label: 'Preference (%)',
+        data: [60, 40],
+        backgroundColor: ['#36A2EB', '#FF6384']
+      }]
+    },
+    options: {
+      plugins: {
+        legend: {
+          display: true,
+          position: 'right'
+        }
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
