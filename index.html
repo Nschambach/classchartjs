@@ -18,7 +18,7 @@
     }
 
     header {
-      background-color: #243b55;
+      background-color: #0E3386;
       color: white;
       text-align: center;
       padding: 40px;
@@ -60,7 +60,7 @@
 
 <header>
   <h1>My Data Portfolio</h1>
-  <p>Exploring Data Through Visualization</p>
+  <p>Data Through Visualization</p>
 </header>
 
 <main>
@@ -68,22 +68,20 @@
   <section>
     <h2>About My Portfolio</h2>
     <p>
-      Welcome to my portfolio! This website
-      demonstrates my ability to create data
-      visualizations using Chart.js.
+      Welcome to my portfolio! 
     </p>
   </section>
 
   <section>
     <h2>Photo Gallery</h2>
     <div class="photos">
-      <img src="photo1.jpg" alt="First photo">
-      <img src="photo2.jpg" alt="Second photo">
+      <img src="IMG_0290.jpeg" alt="First photo">
+      <img src="IMG_1624.jpeg" alt="Second photo">
     </div>
   </section>
 
   <section>
-    <h2>Chart 1: Weekly Exercise</h2>
+    <h2>Chart 1: Sleep Per Week</h2>
     <div class="chart-container">
       <canvas id="lineChart"></canvas>
     </div>
@@ -100,8 +98,8 @@
     <h2>Design Choices</h2>
     <p>
       I chose a simple layout with a light
-      background and dark blue header to
-      create a clean and professional appearance.
+      background and blue header to
+      create a clean appearance that matched Cubbie blue.
       The charts are separated into individual
       sections to make the information easier
       to understand. I used contrasting colors
@@ -120,8 +118,8 @@
     data: {
       labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
       datasets: [{
-        label: 'Minutes Exercised',
-        data: [30, 45, 25, 60, 50],
+        label: 'My Hours of Sleep',
+        data: [7, 6, 6, 7, 9],
         borderColor: 'blue',
         tension: 0.3
       }]
